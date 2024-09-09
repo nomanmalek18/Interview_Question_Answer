@@ -228,154 +228,486 @@
                 <h3>
                     14. What is JSX?
                 </h3>
-                <p></p>
+                <p>
+                    JSX stands for JavaScript XML. It's a syntax extension to JavaScript that allows you to write HTML-like structures within your JavaScript code.
+                </p>
             </div>
 
             <div class="question-15">
                 <h3>
                     15. What do you understand about Virtual DOM? Explain its working
                 </h3>
-                <p></p>
+                <p>
+                    The Virtual Document Object Model (VDOM) is a programming concept that keeps a virtual copy of a user interface in memory and syncs it with the real DOM. 
+                </p>
+
+                <p><b>how the VDOM works:-</b></p>
+                <p><b>Updates only necessary parts</b></p>
+                <p>The VDOM helps React identify and apply only the necessary changes to the DOM.</p>
+
+                <p><b>Prevents wasteful manipulation</b></p>
+                <p>The VDOM prevents unnecessary DOM manipulation, which can degrade performance.</p>
+
+                <p><b>Improves performance</b></p>
+                <p>The VDOM is faster to manipulate than the real DOM because nothing gets drawn onscreen.</p>
             </div>
 
             <div class="question-16">
                 <h3>
                     16. Why can't browsers read JSX?
                 </h3>
-                <p></p>
+                <p>JSX is not natively understood by browsers.</p>
             </div>
 
             <div class="question-17">
                 <h3>
                     17. How is React different from Angular?
                 </h3>
-                <p></p>
+                <p>React is a JavaScript library, whereas Angular is a TypeScript-based JavaScript framework.</p>
             </div>
 
             <div class="question-18">
                 <h3>
                     18. What is the difference between Element and Component?
                 </h3>
-                <p></p>
+                <p>
+                    a component refers to a small part of a larger entity that mostly is a manufactured object. In contrast, an element is one the simplest parts of which anything consists of.
+                </p>
             </div>
 
             <div class="question-19">
                 <h3>
                     19. How to create components in React?
                 </h3>
-                <p></p>
+                <p>
+                    Hey there! To create components in React, you first need to understand that components are the building blocks of a React application. Here's a simple guide to creating components in React:
+
+                        1. **Functional Components**:
+                        - The simplest way to create a component in React is by using a functional component. You can define a component as a JavaScript function that returns JSX (a syntax extension for JavaScript).
+                        - Here's an example of a functional component:
+                            ```jsx
+                            import React from 'react';
+
+                            const MyComponent = () => {
+                            return <div>Hello, I'm a functional component!</div>;
+                            };
+
+                            export default MyComponent;
+                            ```
+
+                        2. **Class Components**:
+                        - Another way to create components in React is by using class components. Class components are ES6 classes that extend from `React.Component`.
+                        - Here's an example of a class component:
+                            ```jsx
+                            import React, { Component } from 'react';
+
+                            class MyComponent extends Component {
+                            render() {
+                                return <div>Hello, I'm a class component!</div>;
+                            }
+                            }
+
+                            export default MyComponent;
+                            ```
+
+                        3. **Using Components**:
+                        - Once you've created a component, you can use it in other parts of your application by importing it and including it in your JSX.
+                        - For example, if you have a component named `MyComponent`, you can use it like this:
+                            ```jsx
+                            import React from 'react';
+                            import MyComponent from './MyComponent';
+
+                            const App = () => {
+                            return (
+                                <div>
+                                <h1>My React App</h1>
+                                <MyComponent />
+                                </div>
+                            );
+                            };
+
+                            export default App;
+                            ```
+
+                        Remember, components in React follow a unidirectional data flow, where data flows from parent components to child components. This helps in creating modular and reusable code in your React applications. Hope this helps you get started with creating components in React! Let me know if you have any more questions.
+                </p>
             </div>
 
-            16. When to use a Class Component over a Function Component?
-            17. What are Pure Components?
-            18. What is the state in React?
-            19. What are props in React?
-            20. What is the difference between state and props?
-            21. Why should we not update the state directly?
-            22. What is the purpose of the callback function as an argument of setState()?
-            23. What is the difference between HTML and React event handling?
-            24. How to bind methods or event handlers in JSX callbacks?
-            15. How to pass a parameter to an event handler or callback?
-            26. What are synthetic events in React?
-            27. What are inline conditional expressions?.
-            28. What are "key" props and what is the benefit of using them in arrays of elements?
-            29. What is the use of refs?
-            30. How to create refs?
-            31. What are forward refs?
-            32. Which is the preferred option within callback refs and findDOMNode()?
-            33. Why are String Refs legacy?
-            34. What is React Fiber?
-            35. What is the main goal of React Fiber?
-            36. What are controlled components?
-            37. What are uncontrolled components?
-            38. What is the difference between createElement and cloneElement?
-            39. What is Lifting State Up in React?
-            40. What are the different phases of the component lifecycle?
-            41. What are the lifecycle methods of React?
-            42. What are Higher-Order components?
-            43. How to create a props proxy for HOC components?
-            44. What is context?
-            45. What is a child's prop?
-            46. How to write comments in React?
-            47. What is the purpose of using a super constructor with props?
-            48. What is reconciliation?
-            49. How to set state with a dynamic key name?
-            50. What would be the common mistake of function being called every time the component renders?
-            51. Is lazy function supported named exports?
-            52. Why does React use className over class attribute?
-            53. What are fragments?
-            54. Why are fragments better than container divs?
-            55. What are portals in React?
-            56. What are stateless components?
-            57. What are stateful components?
-            58. How to apply validation on props in React?
-            59. What are the advantages of React?
-            60. What are the limitations of React?
-            61. What are error boundaries in React v16 ?
-            62. How are error boundaries handled in React v15?
-            63. What are the recommended ways for static type checking?
-            64. What is the use of the react-dom package?
-            65. What is the purpose of the render method of react-dom?
-            66. What is ReactDOMServer?
-            67. How to use InnerHtml in React?
-            68. How to use styles in React?
-            69. How are events different in React?
-            70. What will happen if you use setState in the constructor?
-            71. What is the impact of indexes as keys?
-            72. Is it good to use setState() in componentWillMount() method?
-            73. What will happen if you use props in the initial state?
-            74. How do you conditionally render components?
-            75. Why do we need to be careful when spreading props on DOM elements?
-            76. How do you use decorators in React? 77.How do you memoize a component?
-            77. How do you implement Server-Side Rendering or SSR?
-            78. How to enable production mode in React?
-            79. What is CRA and its benefits?
-            80. What are the lifecycle methods ordered in mounting?
-            81. What are the lifecycle methods going to be deprecated in React v16?
-            83.What is the purpose of the getDerivedStateFromProps() lifecycle method?
-            82. What is the purpose of getSnapshotBeforeUpdate() lifecycle method?
-            83. Do Hooks replace render props and higher order components?
-            84. What is the recommended way for naming components?
-            85. What is the recommended ordering of methods in component class?
-            86. What is a switching component?
-            87. Why do we need to pass a function to setState()?
-            88. What is strict mode in React?
-            89. What are React Mixins?
-            90. Why is isMounted() an anti-pattern and what is the proper solution?
-            91. What are the Pointer Events supported in React?
-            92. Why should component names start with capital letters?
-            93. Are custom DOM attributes supported in React v16?
-            94. What is the difference between constructor and getInitialState?
-            95. How to loop inside JSX?
-            96. How do you access props in attribute quotes?
-            97. What is the React PropType array with shape?
-            98. How to conditionally apply class attributes?
-            99. What is the difference between React and ReactDOM?
-            100. Why is ReactDOM separated from React?
-            101. How to use the React label element?
-            102. How to combine multiple inline style objects?
-            103. How to re-render the view when the browser is resized?
-            104. What is the difference between setState and replaceState methods?
-            98.How to listen to state changes?
-            105. What is the recommended approach of removing an array element in react state?
-            106. Is it possible to use React without rendering HTML?
-            107. How to pretty print JSON with React?
-            108. Why can't you update props in React?
-            109. How to focus an input element on page load?
-            110. What are the possible ways of updating objects in state?
-            111. Why is function preferred over object for setState?
-            112. How can we find the version of React at runtime in the browser?
-            113. What are the approaches to include polyfills in your create react-app?
-            114. How to use https instead of http in create-react-app?
-            115. How to avoid using relative path imports in create-react-app?
-            116. How to add Google Analytics for react-router?
-            117. How to update a component every second?
-            118. How do you apply vendor prefixes to inline styles in React?
-            119. How to import and export components using react and ES6?
-            120. Why do React component names begin with a capital letter?
-            121. Why is a component constructor called only once?
-            122. How to define constants in React?
-            123. How to programmatically trigger click events in React?
+            <div class="question-20">
+                <h3>
+                    20. When to use a Class Component over a Function Component?
+                </h3>
+                <p>
+                    In React, the choice between using a class component and a functional component depends on your specific needs.
+                </p>
+                <p><b>Class Components:-</b></p>
+                <p><b>Complex State Management:</b></p>
+                <p>
+                    If your component requires intricate state management, including multiple state variables, complex state updates, or derived state, class components provide a clear structure for handling these scenarios.
+                </p>
+
+                <p><b>Lifecycle Methods:</b></p>
+                <p>
+                    When you need to perform actions at specific points in a component's lifecycle, such as mounting, updating, or unmounting, class components offer lifecycle methods like <mark>componentDidMount</mark>, <mark>componentDidUpdate</mark>, and <mark>componentWillUnmount</mark>.
+                </p>
+
+                <p><b>Error Boundaries:</b></p>
+                <p>To catch and handle errors that occur within a component's child components, you need to use a class component with the <mark>componentDidCatch</mark> lifecycle method.</p>
+
+                <p><b>Functional Components (with Hooks):-</b></p>
+
+                <p><b>Simpler Syntax:</b></p>
+                <p>
+                    Functional components have a more concise and readable syntax, especially with the introduction of Hooks. They are easier to write and understand, particularly for smaller components.
+                </p>
+
+                <p><b>Better Performance:</b></p>
+                <p>Functional components can be slightly more performant than class components, especially in large-scale applications. This is because they avoid the overhead of creating class instances.</p>
+
+                <p><b>Easier to Test:</b></p>
+                <p>Functional components are generally easier to test due to their simpler structure and reliance on props.</p>
+
+                <p><b>Code Reusability:</b></p>
+                <p>With custom Hooks, you can extract and reuse logic across different functional components, promoting code reusability and maintainability.
+                </p>
+            </div>
+
+            <div class="question-21">
+                <h3>
+                    21. What are Pure Components?
+                </h3>
+                <p>
+                    a pure component is a class-based component that automatically skips re-rendering when the props and state of the component don't change. This helps to optimize performance by reducing unnecessary updates. 
+                </p>
+            </div>
+            
+            <div class="question-22">
+                <h3>
+                    22. What is the state in React?
+                </h3>
+                <p>
+                    The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.
+                </p>
+            </div>
+
+            <div class="question-23">
+                <h3>
+                    23. What are props in React?
+                </h3>
+                <p>
+                    props (short for properties) are a way to pass data from a parent component to its child components. They are like arguments that you pass to a function
+                </p>
+            </div>
+
+            <div class="question-24">
+                <h3>24. What is the difference between state and props?</h3>
+                <p>
+                    the main difference between props and state is that the props are a way to pass the data or properties from one component to other components while the state is the real-time data available to use within only that component.  
+                </p>
+            </div>
+            
+            <div class="question-25">
+                <h3>25. Why should we not update the state directly?</h3>
+                <p>
+                    React may not detect the change, and your component might not re-render as expected. 
+                </p>
+            </div>
+
+            <div class="question-26">
+                <h3>26. What is the purpose of the callback function as an argument of setState()?</h3>
+                <p>
+                    the callback function provided as an argument to setState() is used to execute code after the state has been updated and the component has re-rendered, allowing you to perform actions that depend on the new state value, particularly when dealing with asynchronous operations like network requests or updating multiple state values in sequence. 
+
+                </p>
+            </div>
+
+            <div class="question-27">
+                <h3>27. What is the difference between HTML and React event handling?</h3>
+                <p>
+                    The primary difference between HTML and React event handling is that in HTML, event handlers are directly written as strings within the HTML element, while in React, event handlers are JavaScript functions passed as attributes to the element, using camelCase naming conventions instead of lowercase, allowing for more complex logic within the event handler due to React's component-based structure and state management capabilities. 
+                </p>
+            </div>
+
+
+            <div class="question-28">
+                <h3>28. How to bind methods or event handlers in JSX callbacks?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-29">
+                <h3>29. How to pass a parameter to an event handler or callback?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-30">
+                <h3>30. What are synthetic events in React?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-31">
+                <h3>31. What are inline conditional expressions?.</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-32">
+                <h3>32. What are "key" props and what is the benefit of using them in arrays of elements?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-33">
+                <h3>33. What is the use of refs?</h3>
+                <p>
+
+                </p>
+            </div>
+           
+            <div class="question-34">
+                <h3>34. How to create refs?</h3>
+                <p>
+
+                </p>
+            </div>
+           
+            <div class="question-35">
+                <h3>35. What are forward refs?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-36">
+                <h3>36. Which is the preferred option within callback refs and findDOMNode()?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-37">
+                <h3>37. Why are String Refs legacy?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-38">
+                <h3>38. What is React Fiber?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-39">
+                <h3>39. What is the main goal of React Fiber?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-40">
+                <h3>40. What are controlled components?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-41">
+                <h3>41. What are uncontrolled components?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-42">
+                <h3>42. What is the difference between createElement and cloneElement?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-43">
+                <h3>43. What is Lifting State Up in React?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-44">
+                <h3>44. What are the different phases of the component lifecycle?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-45">
+                <h3>45. What are the lifecycle methods of React?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-46">
+                <h3>46. What are Higher-Order components?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-47">
+                <h3>47. How to create a props proxy for HOC components?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-48">
+                <h3>48. What is context?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-49">
+                <h3>49. What is a child's prop?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-50">
+                <h3>50. How to write comments in React?</h3>
+                <p>
+
+                </p>
+            </div>
+            
+            <div class="question-50">
+                <h3>50. What is the purpose of using a super constructor with props?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-50">
+                <h3>50. What is reconciliation?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-51">
+                <h3>51. How to set state with a dynamic key name?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-52">
+                <h3>52. What would be the common mistake of function being called every time the component renders?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-53">
+                <h3>53. Is lazy function supported named exports?</h3>
+                <p>
+
+                </p>
+            </div>
+
+            <div class="question-54">
+                <h3>54. Why does React use className over class attribute?</h3>
+                <p>
+
+                </p>
+            </div>
+
+
+
+
+            <h3>55. What are fragments?</h3>
+            <h3>56. Why are fragments better than container divs?</h3>
+            <h3>57. What are portals in React?</h3>
+            <h3>58. What are stateless components?</h3>
+            <h3>59. What are stateful components?</h3>
+            <h3>60. How to apply validation on props in React?</h3>
+            <h3>61. What are the advantages of React?</h3>
+            <h3>62. What are the limitations of React?</h3>
+            <h3>63. What are error boundaries in React v16 ?</h3>
+            <h3>64. How are error boundaries handled in React v15?</h3>
+            <h3>65. What are the recommended ways for static type checking?</h3>
+            <h3>66. What is the use of the react-dom package?</h3>
+            <h3>67. What is the purpose of the render method of react-dom?</h3>
+            <h3>68. What is ReactDOMServer?</h3>
+            <h3>69. How to use InnerHtml in React?</h3>
+            <h3>70. How to use styles in React?</h3>
+            <h3>71. How are events different in React?</h3>
+            <h3>72. What will happen if you use setState in the constructor?</h3>
+            <h3>73. What is the impact of indexes as keys?</h3>
+            <h3>74. Is it good to use setState() in componentWillMount() method?</h3>
+            <h3>75. What will happen if you use props in the initial state?</h3>
+            <h3>76. How do you conditionally render components?</h3>
+            <h3>77. Why do we need to be careful when spreading props on DOM elements?</h3>
+            <h3>78. How do you use decorators in React? 77.How do you memoize a component?</h3>
+            <h3>79. How do you implement Server-Side Rendering or SSR?</h3>
+            <h3>80. How to enable production mode in React?</h3>
+            81. What is CRA and its benefits?
+            82. What are the lifecycle methods ordered in mounting?
+            83. What are the lifecycle methods going to be deprecated in React v16?
+            84.What is the purpose of the getDerivedStateFromProps() lifecycle method?
+            85. What is the purpose of getSnapshotBeforeUpdate() lifecycle method?
+            86. Do Hooks replace render props and higher order components?
+            87. What is the recommended way for naming components?
+            88. What is the recommended ordering of methods in component class?
+            89. What is a switching component?
+            90. Why do we need to pass a function to setState()?
+            91. What is strict mode in React?
+            92. What are React Mixins?
+            93. Why is isMounted() an anti-pattern and what is the proper solution?
+            94. What are the Pointer Events supported in React?
+            95. Why should component names start with capital letters?
+            96. Are custom DOM attributes supported in React v16?
+            97. What is the difference between constructor and getInitialState?
+            98. How to loop inside JSX?
+            99. How do you access props in attribute quotes?
+            100. What is the React PropType array with shape?
+            101. How to conditionally apply class attributes?
+            102. What is the difference between React and ReactDOM?
+            103. Why is ReactDOM separated from React?
+            104. How to use the React label element?
+            105. How to combine multiple inline style objects?
+            106. How to re-render the view when the browser is resized?
+            107. What is the difference between setState and replaceState methods?
+            108. How to listen to state changes?
+            109. What is the recommended approach of removing an array element in react state?
+            110. Is it possible to use React without rendering HTML?
+            111. How to pretty print JSON with React?
+            112. Why can't you update props in React?
+            113. How to focus an input element on page load?
+            114. What are the possible ways of updating objects in state?
+            115. Why is function preferred over object for setState?
+            116. How can we find the version of React at runtime in the browser?
+            117. What are the approaches to include polyfills in your create react-app?
+            118. How to use https instead of http in create-react-app?
+            119. How to avoid using relative path imports in create-react-app?
+            120. How to add Google Analytics for react-router?
+            121. How to update a component every second?
+            122. How do you apply vendor prefixes to inline styles in React?
+            123. How to import and export components using react and ES6?
+            124. Why do React component names begin with a capital letter?
+            125. Why is a component constructor called only once?
+            126. How to define constants in React?
+            127. How to programmatically trigger click events in React?
 
         </div>
     </div>
